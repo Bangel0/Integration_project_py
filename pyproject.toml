@@ -19,3 +19,8 @@ dependencies = [
     "smmap==5.0.2",
     "streamlit>=1.49.1",
 ]
+
+[tool.uv.workspace]
+members = [
+    "streamlit",
+]
