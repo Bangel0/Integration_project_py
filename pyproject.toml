@@ -12,10 +12,16 @@ dependencies = [
     "google-auth-oauthlib>=1.2.2",
     "google-genai>=1.38.0",
     "google-generativeai>=0.8.5",
+    "matplotlib>=3.10.7",
     "pandas>=2.3.2",
     "plotly-express>=0.4.1",
     "python-dotenv>=1.1.1",
     "setuptools==75.6.0",
     "smmap==5.0.2",
     "streamlit>=1.49.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "streamlit",
 ]
