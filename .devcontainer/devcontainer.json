@@ -9,6 +9,9 @@
 	"shutdownAction": "stopCompose",
 	"customizations": {
 		"vscode": {
+		"settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+		},
 			"extensions": [
 				"ms-azuretools.vscode-containers",
 				"ms-vscode-remote.remote-containers",
