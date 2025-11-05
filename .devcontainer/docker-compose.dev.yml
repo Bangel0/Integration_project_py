@@ -3,14 +3,14 @@ networks:
     driver: bridge
     
 services:
-  app:
+  python_integration:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: Dockerfile.dev
     environment:
       - GEMINI_API_KEY=APIKEY
-      - API_BACKEND_URL=localhost/8080
+      - API_BACKEND_URL=localhost:8080
     ports:
-      - "4560:8501"
+      - "8501:8501"
     networks:
       - PythonApp
