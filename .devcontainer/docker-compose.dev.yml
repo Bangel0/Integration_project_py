@@ -8,9 +8,11 @@ services:
       context: ..
       dockerfile: Dockerfile.dev
     environment:
-      - GEMINI_API_KEY=APIKEY
+      - GEMINI_API_KEY=AIzaSyCZNos2DNINqdfmtHbSdExzoywXRONmdas
       - API_BACKEND_URL=localhost:8080
     ports:
       - "8501:8501"
+    volumes:
+      - ../.:/app:rw
     networks:
       - PythonApp
