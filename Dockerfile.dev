@@ -5,9 +5,9 @@ WORKDIR /app
 COPY . .
 
 # Asegúrate de que el script tenga permisos de ejecución
-RUN chmod +x install_deps.sh && \
-    apk add bash && \
-    bash install_deps.sh
+# RUN chmod +x install_deps.sh && \
+#     apk add bash && \
+#     bash install_deps.sh
 
 # Ejecuta la instalación condicional
 CMD [ "uv run streamlit run main.py" ]
