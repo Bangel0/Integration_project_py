@@ -96,13 +96,13 @@ if uploaded_file:
             st.plotly_chart(fig, use_container_width=True)
 
         # POLAR - Retraso promedio por día de la semana
-        if cols['date'] and cols['delay']:
-            st.markdown("#### 🌀 Retraso promedio por día de la semana")
-            df['weekday'] = pd.to_datetime(df[cols['date']], errors='coerce').dt.day_name()
-            delay_week = df.groupby('weekday')[cols['delay']].mean().dropna()
-            delay_week = delay_week.reindex(['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'])
-            fig = px.line_polar(r=delay_week.values, theta=delay_week.index, line_close=True, title="Retraso promedio semanal")
-            st.plotly_chart(fig, use_container_width=True)
+#       if cols['date'] and cols['delay']:
+#           st.markdown("#### 🌀 Retraso promedio por día de la semana")
+#           df['weekday'] = pd.to_datetime(df[cols['date']], errors='coerce').dt.day_name()
+#           delay_week = df.groupby('weekday')[cols['delay']].mean().dropna()
+#           delay_week = delay_week.reindex(['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'])
+#          fig = px.line_polar(r=delay_week.values, theta=delay_week.index, line_close=True, title="Retraso promedio semanal")
+#            st.plotly_chart(fig, use_container_width=True)
 
         # VIOLIN - Distribución de retrasos por aerolínea
         if cols['delay'] and cols['airline']:
